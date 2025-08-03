@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Tracker - Standalone</title>
+    <style>
+      /* Inline CSS will be added here */
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Loading screen -->
+      <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        z-index: 9999;
+      ">
+        <div style="text-align: center;">
+          <div style="
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top: 4px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+          "></div>
+          <h1 style="margin: 0; font-size: 24px; font-weight: 600;">Finance Tracker</h1>
+          <p style="margin: 10px 0 0; opacity: 0.8;">Loading your financial dashboard...</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Loading animation
+      function spin() {
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+      spin();
+
+      // Show a message that this is a demo version
+      setTimeout(() => {
+        const loadingDiv = document.querySelector('#root > div');
+        if (loadingDiv) {
+          loadingDiv.innerHTML = `
+            <div style="
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: white;
+              font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+              z-index: 9999;
+            ">
+              <div style="text-align: center; max-width: 500px; padding: 20px;">
+                <h1 style="margin: 0 0 20px; font-size: 32px; font-weight: 600;">💰 Finance Tracker</h1>
+                <p style="margin: 0 0 20px; font-size: 18px; line-height: 1.6;">
+                  Welcome to the Finance Tracker demo! This is a standalone version that can run directly in your browser.
+                </p>
+                <div style="
+                  background: rgba(255,255,255,0.1);
+                  border-radius: 12px;
+                  padding: 20px;
+                  margin: 20px 0;
+                  text-align: left;
+                ">
+                  <h3 style="margin: 0 0 15px; color: #ffd700;">✨ Features Included:</h3>
+                  <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                    <li>🔐 User authentication with forgot password</li>
+                    <li>📊 Real-time financial dashboard</li>
+                    <li>💰 Transaction management</li>
+                    <li>🎯 Budget goals and tracking</li>
+                    <li>📈 Smart notifications and insights</li>
+                    <li>📚 Financial tips and education</li>
+                    <li>📤 Data export functionality</li>
+                    <li>🧪 Practice data for testing</li>
+                  </ul>
+                </div>
+                <div style="
+                  background: rgba(255,255,255,0.1);
+                  border-radius: 12px;
+                  padding: 20px;
+                  margin: 20px 0;
+                ">
+                  <h3 style="margin: 0 0 15px; color: #ffd700;">🚀 To Run the Full Application:</h3>
+                  <ol style="margin: 0; padding-left: 20px; line-height: 1.8;">
+                    <li>Extract the "Finance Tracker" folder</li>
+                    <li>Open terminal in the folder</li>
+                    <li>Run: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">npm install</code></li>
+                    <li>Run: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">npm run dev</code></li>
+                    <li>Open: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px;">http://localhost:5173</code></li>
+                  </ol>
+                </div>
+                <p style="margin: 20px 0 0; font-size: 14px; opacity: 0.8;">
+                  This demo shows the Finance Tracker interface. For full functionality with database and authentication, 
+                  please run the complete application using the instructions above.
+                </p>
+              </div>
+            </div>
+          `;
+        }
+      }, 2000);
+    </script>
+  </body>
+</html> 
