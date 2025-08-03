@@ -45,44 +45,6 @@ A comprehensive personal finance management application built with React, TypeSc
 - **Realistic financial scenarios** to practice with
 - **Educational content** for financial literacy
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-- Supabase account (for backend)
-
-### Installation
-
-1. **Install dependencies**
-```bash
-npm install
-```
-
-2. **Set up Supabase**
-   - Create a new project at [supabase.com](https://supabase.com)
-   - Get your project URL and anon key
-   - Create a `.env` file in the root directory:
-
-```env
-VITE_SUPABASE_URL=your_supabase_project_url
-VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-3. **Run database migrations**
-   - Go to your Supabase dashboard
-   - Navigate to SQL Editor
-   - Run the SQL from `supabase/migrations/20250803034748_royal_sea.sql`
-
-4. **Start the development server**
-```bash
-npm run dev
-```
-
-5. **Open your browser**
-   - Navigate to `http://localhost:5173`
-   - Sign up with any email address
-   - Start tracking your finances!
 
 ## 🔑 Password Recovery
 
@@ -94,7 +56,7 @@ If you forget your password, the app provides a secure recovery system:
 4. **Click the link** to set a new password
 5. **Enter your new password** and confirm it
 
-For detailed instructions and troubleshooting, see [PASSWORD-RECOVERY-GUIDE.md](./PASSWORD-RECOVERY-GUIDE.md)
+
 
 ## 🛠️ Tech Stack
 
@@ -124,10 +86,6 @@ For detailed instructions and troubleshooting, see [PASSWORD-RECOVERY-GUIDE.md](
 - **Realistic financial scenarios** ($5,950 income, $2,050 expenses)
 - **Educational value** for learning personal finance
 
-### Data Export
-- **CSV export** of all transactions
-- **Date-stamped filenames** for organization
-- **Complete transaction history** export
 
 ## 🎉 Features Summary
 
